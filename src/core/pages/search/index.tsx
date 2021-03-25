@@ -1,12 +1,15 @@
-
-import CardSearch from './CardSearch';
-import './styles.scss';
+import CardDetails from "./CardDetails";
+import CardSearch from "./CardSearch";
+import "./styles.scss";
 
 const Search = () => (
-    <div className="search-container">
-          <CardSearch />     
-    </div>
-    
-)
+  <>    
+      <div className="card-search-container">
+        <CardSearch />
+      </div>      
+        <CardDetails />
+         
+  </>
+);
 
 export default Search;
