@@ -1,10 +1,12 @@
 
-const App =() => {
+import './app.scss';
+import Routes from './routes';
+
+
+const App = () => {
   return (
-    <div>
-     
-    </div>
-  );
-}
+    <Routes />
+  )
+};
 
 export default App;
