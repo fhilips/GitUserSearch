@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageHeader from "./core/components/PageHeader";
+import Home from "./core/pages/home";
 
 
 const Routes = () => (
@@ -7,7 +8,7 @@ const Routes = () => (
         <PageHeader />
         <Switch>
             <Route path="/" exact>
-                
+                <Home />
             </Route>
         </Switch>
     </BrowserRouter>
