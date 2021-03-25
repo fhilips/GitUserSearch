@@ -12,6 +12,11 @@
 
 .header-title {    
     color: #FFF;
-    font-size: 52px;
+    font-size: 35px;
     margin-left: 30vh;
+    transition: 0.5s;
+    text-decoration: none;
+    &:hover {
+        color: #000;
+    }
 }

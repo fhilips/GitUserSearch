@@ -1,0 +1,14 @@
+.button-icon {
+    background-color: var(--color-primary);
+    height: 60px;
+    width: 170px;
+    font-weight: bold;
+    color: #FFF;
+    border-radius: 10px;
+    border: 15px none #FFF;    
+    transition: 0.5s;
+    &:hover {
+        color: black;
+    }
+}
+

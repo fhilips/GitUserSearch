@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom';
+import ButtonIcon from '../../components/ButtonIcon';
 import './styles.scss';
 
 const Home = () => (
@@ -10,8 +12,12 @@ const Home = () => (
             <h4 className="text-subtitle">
                  Busca pelo nome do usuário, integrando com a API oficial do Github.
                 <br />
-            </h4>
+            </h4>      
+            <Link to="/search" className="btn-home-container">
+                <ButtonIcon text="COMEÇAR"/>
+            </Link>             
         </div>
+        
     </div>
 )
 

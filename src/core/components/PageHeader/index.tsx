@@ -1,9 +1,12 @@
 
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const PageHeader = () => (
     <header className="header-container">
-        <h1 className="header-title">GitUserSearch</h1>
+        <Link to="/" className="header-title">
+            <h1 >GitUserSearch</h1>
+        </Link>       
     </header>
 )
 
