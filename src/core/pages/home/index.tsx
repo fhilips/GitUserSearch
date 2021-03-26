@@ -13,7 +13,7 @@ const Home = () => (
                  Busca pelo nome do usuário, integrando com a API oficial do Github.
                 <br />
             </h4>      
-            <Link to="/search" className="btn-home-container">
+            <Link to="/search">
                 <ButtonIcon text="COMEÇAR"/>
             </Link>             
         </div>
