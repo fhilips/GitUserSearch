@@ -3,6 +3,7 @@ import { makeRequest } from "../../utils/request";
 import { User } from "../../utils/types";
 import CardDetails from "./CardDetails";
 import CardSearch from "./CardSearch";
+import UserDetailsLoader from "./Loarders/UserDetailsLoader";
 import "./styles.scss";
 
 const Search = () => {
@@ -52,7 +53,10 @@ const Search = () => {
       {userIsEmpty ? (
         <div></div>
       ) : isLoading ? (
-        <div>carregando</div>
+        <div className="loader-details-container">
+          <UserDetailsLoader />
+        </div>
+        
       ) : (
         <CardDetails user={userResponse} />
       )}
