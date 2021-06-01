@@ -1,4 +1,4 @@
-export type User = {   
+export type UserGithub = {   
     login: string,
     public_repos: number, 
     followers: number,

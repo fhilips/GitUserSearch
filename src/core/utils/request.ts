@@ -5,10 +5,11 @@ type RequesParams = {
     url: string;    
 }
 
+const BASE_URL = 'https://api.github.com/users';
 
 export const makeRequest = ({ method = 'GET', url }: RequesParams) => {
     return axios({
         method,
-        url: `${url}`       
+        url: `${BASE_URL}${url}`       
     })
 }

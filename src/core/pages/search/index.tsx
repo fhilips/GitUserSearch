@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { makeRequest } from "../../utils/request";
-import { User } from "../../utils/types";
+import { UserGithub } from "../../types/types";
 import CardDetails from "./CardDetails";
 import CardSearch from "./CardSearch";
-import UserDetailsLoader from "./Loarders/UserDetailsLoader";
+import UserDetailsLoader from "./Loaders/UserDetailsLoader";
 import "./styles.scss";
 
 const Search = () => {
-  const [username, setUsername] = useState("");
-  const [userResponse, setUserResponse] = useState<User>({
+  const [username, setUsername] = useState('');
+  const [userResponse, setUserResponse] = useState<UserGithub>({
     login: '',
     public_repos: 0,
     followers: 0,
@@ -30,10 +30,10 @@ const Search = () => {
       setUserIsEmpty(false);
       setIsLoading(true);
       if (!userIsEmpty) {
-        makeRequest({ url: `https://api.github.com/users/${username}` })
+        makeRequest({ url: `/${username}` })
           .then((response) => setUserResponse(response.data))
           .catch(() => {
-            setUsername('');
+            
             alert("Usuário não encontrado!")
           })
           .finally(() => {
@@ -58,7 +58,7 @@ const Search = () => {
         </div>
         
       ) : (
-        <CardDetails user={userResponse} />
+        <CardDetails userGithub={userResponse} />
       )}
     </>
   );
